@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="form_1">
+            <h3>Create Acoount</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm-Password" required>
+
+            <div class="btn-box">
+                <button type="button" id="next_1">Next</button>
+            </div>
+        </form>
+
+        <form action="" id="form_2">
+            <h3>SOCIALS LINKS</h3>
+            <input type="text" placeholder="Medium">
+            <input type="text" placeholder="Github">
+            <input type="text" placeholder="Linkedin">
+
+            <div class="btn-box">
+                <button type="button" id="back_1">Back</button>
+                <button type="button" id="next_2">Next</button>
+            </div>
+        </form>
+
+        <form action="" id="form_3">
+            <h3>PERSONAL INFO</h3>
+            <input type="text" placeholder="First Name" required>
+            <input type="password" placeholder="Last Name" required>
+            <input type="password" placeholder="Mobile No." required>
+
+            <div class="btn-box">
+                <button type="button" id="back_2">Back</button>
+                <button type="button" >Submit</button>
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step 1</small></div>
+            <div class="step-col"><small>Step 2</small></div>
+            <div class="step-col"><small>Step 3</small></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var form_1 = document.getElementById("form_1");
+        var form_2 = document.getElementById("form_2");
+        var form_3 = document.getElementById("form_3");
+
+        var next_1 = document.getElementById("next_1");
+        var next_2 = document.getElementById("next_2");
+        var back_1 = document.getElementById("back_1");
+        var back_2 = document.getElementById("back_2");
+
+        var progress = document.getElementById("progress");
+
+        next_1.onclick = function(){
+            form_1.style.left = "-450px";
+            form_2.style.left = "40px";
+            progress.style.width = "240px";
+        }
+
+        back_1.onclick = function(){
+            form_1.style.left = "40px"
+            form_2.style.left = "450px";
+            progress.style.width = "120px";
+        }
+
+        next_2.onclick = function(){
+            form_3.style.left = "40px";
+            form_2.style.left = "-450px";
+            progress.style.width = "360px";
+        }
+
+        back_2.onclick = function(){
+            form_3.style.left = "450px";
+            form_2.style.left = "40px";
+            progress.style.width = "240px";
+        }
+
+    </script>
+</body>
+
+</html>
